@@ -189,6 +189,7 @@ class _FlutterStoryViewerState extends State<FlutterStoryViewer> {
                 SizedBox(
                   height: constaint.maxHeight - 40,
                   child: VideoView(
+                    fillColor: widget.backgroundColor ?? Colors.black,
                     key: ValueKey(currentIndex),
                     index: currentIndex,
                     videoItem: widget.items[currentIndex],

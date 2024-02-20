@@ -14,6 +14,7 @@ class VideoView extends StatefulWidget {
     required this.watchedPositionCallback,
     required this.onNextStatus,
     required this.onPreviousStatus,
+    required this.fillColor,
     this.loadingOrBufferingIndicatorBuilder,
     super.key,
   });
@@ -38,6 +39,9 @@ class VideoView extends StatefulWidget {
 
   /// View when Video is loading
   final Widget Function(BuildContext)? loadingOrBufferingIndicatorBuilder;
+
+  /// The fill color for the video background
+  final Color fillColor;
 
   @override
   State<VideoView> createState() => _VideoViewState();
@@ -109,6 +113,7 @@ class _VideoViewState extends State<VideoView> {
                     child: Video(
                       controller: controller,
                       controls: MaterialVideoControls,
+                      fill: widget.fillColor,
                     ),
                   );
                 },
