@@ -1,9 +1,8 @@
 name: flutter_story_viewer
-description: Story View that works
-version: 0.1.0+2
+description: Story View For Instagram, Whatsapp (Works with variable video duration)
+version: 0.1.0+3
 homepage: https://github.com/PeterAkande/flutter_story_viewer
 repository: https://github.com/PeterAkande/flutter_story_viewer
-
 
 environment:
   sdk: ">=3.0.0 <4.0.0"
