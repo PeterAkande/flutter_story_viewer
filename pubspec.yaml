@@ -1,0 +1,23 @@
+name: flutter_story_viewer
+description: Story View that works
+version: 0.1.0+1
+homepage:
+
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+  flutter: ">=3.10.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_cache_manager: ^3.3.1
+  media_kit: ^1.1.10 # Primary package.
+  media_kit_libs_video: ^1.0.4
+  media_kit_video: ^1.2.4 # For video rendering.
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  mocktail: ^1.0.0
+  very_good_analysis: ^5.1.0
