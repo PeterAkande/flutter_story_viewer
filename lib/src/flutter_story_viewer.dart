@@ -162,14 +162,16 @@ class _FlutterStoryViewerState extends State<FlutterStoryViewer> {
                                   width: width - paddingExtent,
                                   child: Padding(
                                     padding: padding,
-                                    child: LinearProgressIndicator(
-                                      value: value,
-                                      color: widget.indicatorColor,
-                                      backgroundColor:
-                                          widget.indicatorBackgroundColor,
+                                    child: ClipRRect(
                                       borderRadius:
                                           widget.indicatorBorderRadius ??
                                               BorderRadius.circular(10),
+                                      child: LinearProgressIndicator(
+                                        value: value,
+                                        color: widget.indicatorColor,
+                                        backgroundColor:
+                                            widget.indicatorBackgroundColor,
+                                      ),
                                     ),
                                   ),
                                 );
