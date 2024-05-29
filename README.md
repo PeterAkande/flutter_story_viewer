@@ -65,7 +65,7 @@ Refer to the [`main.dart`](https://github.com/PeterAkande/flutter_story_viewer/b
 
 ## 🐛 Bugs/Requests
 
-Pull requests are well welcomed. I any request is needed, be cool to open an issue.
+Pull requests are well welcomed. If any request is needed, be cool to open an issue.
 
 ## Continuous Integration 🤖
 
