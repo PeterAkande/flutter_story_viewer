@@ -4,7 +4,7 @@
 [![Powered by Mason](https://img.shields.io/endpoint?url=https%3A%2F%2Ftinyurl.com%2Fmason-badge)](https://github.com/felangel/mason)
 [![License: MIT][license_badge]][license_link]
 
-Story View for Whatsapp and Instagram(works with variable video duration)
+Story View for Whatsapp and Instagram (works with variable video duration)
 
 ## Installation 💻
 
@@ -15,8 +15,57 @@ Install via `flutter pub add`:
 ```sh
 dart pub add flutter_story_viewer
 ```
+Or
+
+```yaml
+dependencies:
+  flutter_story_viewer: ^0.1.1
+```
+
+### 🚀 Example Usage
+
+```dart
+...
+Column(
+    children: <Widget>[
+    SizedBox(
+        height: size.height * 0.8,
+        child: const FlutterStoryViewer(
+        backgroundColor: Colors.grey,
+        items: [
+            VideoItem(
+                url:
+                    'https://townbox.s3.amazonaws.com/static/videos/FastApi_Websocket_Demo_2-19B0B1D7-460E-439A-B3FC-F78041DAB6A8.mp4',
+            ),
+            VideoItem(
+                url:
+                    'https://user-images.githubusercontent.com/28951144/229373709-603a7a89-2105-4e1b-a5a5-a6c3567c9a59.mp4',
+            ),
+            VideoItem(
+                url:
+                    'https://user-images.githubusercontent.com/28951144/229373695-22f88f13-d18f-4288-9bf1-c3e078d83722.mp4',
+            ),
+        ],
+        ),
+    )
+    ],
+)
+...
+```
+
+Refer to the [`main.dart`](https://github.com/PeterAkande/flutter_story_viewer/blob/main/example/lib/main.dart) in the example.
+
+##  Screenshots/Demo
+
+| | |
+|------|-------|
+|<img src="https://github.com/PeterAkande/flutter_story_viewer//raw/main/assets/screenshot_1.png" width="250">|<img src="https://github.com/PeterAkande/flutter_story_viewer//raw/main/assets/screenshot_2.png" width="250">|
 
 ---
+
+## 🐛 Bugs/Requests
+
+Pull requests are well welcomed. I any request is needed, be cool to open an issue.
 
 ## Continuous Integration 🤖
 
@@ -26,29 +75,7 @@ Out of the box, on each pull request and push, the CI `formats`, `lints`, and `t
 
 ---
 
-## Running Tests 🧪
 
-For first time users, install the [very_good_cli][very_good_cli_link]:
-
-```sh
-dart pub global activate very_good_cli
-```
-
-To run all unit tests:
-
-```sh
-very_good test --coverage
-```
-
-To view the generated coverage report you can use [lcov](https://github.com/linux-test-project/lcov).
-
-```sh
-# Generate Coverage Report
-genhtml coverage/lcov.info -o coverage/
-
-# Open Coverage Report
-open coverage/index.html
-```
 
 [flutter_install_link]: https://docs.flutter.dev/get-started/install
 [github_actions_link]: https://docs.github.com/en/actions/learn-github-actions

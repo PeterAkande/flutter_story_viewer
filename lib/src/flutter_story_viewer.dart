@@ -131,7 +131,7 @@ class _FlutterStoryViewerState extends State<FlutterStoryViewer> {
                       return ValueListenableBuilder(
                         valueListenable: watchedSecondsNotifier,
                         builder: (context, _, child) {
-                          const paddingExtent = 10;
+                          const paddingExtent = 5;
                           final width = (size.width -
                                   (widget.items.length * paddingExtent)) /
                               widget.items.length;

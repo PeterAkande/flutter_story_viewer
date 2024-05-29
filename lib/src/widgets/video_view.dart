@@ -58,6 +58,7 @@ class _VideoViewState extends State<VideoView> {
     player = Player();
     late Media media;
 
+    // Get if file has been cached and downloaded.
     final fileInfo = await DefaultCacheManager()
         .getFileFromCache(widget.videoItem.uniqueCacheKey);
 
@@ -101,10 +102,12 @@ class _VideoViewState extends State<VideoView> {
                 future: initializePlayerFuture,
                 builder: (context, snapshot) {
                   if (snapshot.connectionState != ConnectionState.done) {
-                    return const SizedBox(
-                      height: 20,
-                      width: 20,
-                      child: CircularProgressIndicator(),
+                    return const Center(
+                      child: SizedBox(
+                        height: 20,
+                        width: 20,
+                        child: CircularProgressIndicator(),
+                      ),
                     );
                   }
                   return MaterialVideoControlsTheme(
